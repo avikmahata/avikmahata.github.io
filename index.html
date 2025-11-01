@@ -3,21 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Avik Mahata</title>
+  <title>Mahata Lab – Avik Mahata</title>
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; margin-top: 10%; }
-    a { color: #0044cc; text-decoration: none; }
-    nav a { margin: 0 10px; }
+    body {
+      font-family: "Georgia", serif;
+      margin: 40px auto;
+      max-width: 900px;
+      line-height: 1.6;
+      background-color: #fafafa;
+      color: #111;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.2em;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    hr {
+      width: 60px;
+      border: 1px solid #ccc;
+      margin: 10px auto 30px auto;
+    }
+
+    h2 {
+      color: red;
+      font-size: 1.4em;
+      font-weight: bold;
+      margin-top: 40px;
+    }
+
+    p {
+      text-align: justify;
+      text-justify: inter-word;
+      font-size: 1.05em;
+      margin: 0 10px 20px 10px;
+    }
+
+    nav {
+      margin: 20px 0 30px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0044cc;
+      margin: 0 12px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      border: 1px solid #555;
+      background: white;
+      padding: 25px 35px;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
-  <h1>Welcome to Avik Mahata’s Homepage</h1>
+
+  <h1>Mahata Lab</h1>
+  <hr>
+
   <nav>
+    <a href="index.html">Home</a> |
     <a href="resume.html">Resume</a> |
     <a href="research.html">Research</a> |
     <a href="teaching.html">Teaching</a> |
     <a href="team.html">Team</a>
   </nav>
-  <p>This is a simple academic homepage hosted on GitHub Pages.</p>
+
+  <div class="content">
+    <h2>Welcome to Advanced Materials Intelligence (AMI) Lab</h2>
+    <p>
+      Our research group focuses on <b>computational materials science</b>—developing and integrating
+      advanced modeling tools to study multiscale defect formation, microstructural evolution, and
+      material properties in metals, alloys, and hydrogen-related systems. We employ
+      <b>large-scale parallel computing</b> (petascale and exascale) on supercomputers equipped with
+      thousands of CPUs and GPUs, enabling high-fidelity simulations that capture the complexities of both
+      fundamental science and engineering applications.
+    </p>
+
+    <p>
+      To calibrate and validate our predictions, we synergize <b>machine learning</b> and data analytics
+      with a suite of experimental techniques (optical microscopy, SEM-orientation image mapping, TEM).
+      This holistic approach ensures robust insights into nano- and microstructural phenomena,
+      paving the way for optimized materials design and performance. We welcome collaborative
+      efforts with fellow researchers in academia, national laboratories, and industry to accelerate
+      breakthroughs in sustainable energy, advanced alloys, and next-generation computational strategies.
+    </p>
+  </div>
+
 </body>
 </html>
