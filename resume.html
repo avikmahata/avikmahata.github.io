@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume – Avik Mahata</title>
+  <style>
+    :root{
+      --text:#111;
+      --muted:#666;
+      --link:#0a53c1;
+      --border:#ddd;
+      --bg:#fafafa;
+      --card:#fff;
+    }
+    body{
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      background: var(--bg);
+      margin: 40px auto;
+      max-width: 900px;
+      line-height: 1.6;
+    }
+    header, nav { text-align: center; }
+    h1{ font-weight: 400; letter-spacing:.02em; margin:0 0 6px 0; }
+    hr{ width:60px; border:1px solid #ccc; margin:10px auto 24px; }
+
+    nav a{
+      color: var(--link);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    nav a:hover{ text-decoration: underline; }
+
+    .card{
+      background: var(--card);
+      border: 1px solid #555;
+      border-radius: 6px;
+      padding: 26px 28px;
+    }
+
+    /* Section headings */
+    h2{
+      margin-top:0;
+      font-size: 1.35rem;
+      letter-spacing:.01em;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 6px;
+    }
+
+    /* Appointment list */
+    .appointments{ list-style: none; padding:0; margin: 18px 0 0 0; }
+    .item{
+      padding:16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .item:last-child{ border-bottom:none; }
+
+    .row{
+      display:flex;
+      gap:16px;
+      align-items:flex-start;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .left{
+      min-width:280px;
+      flex: 1 1 560px;
+    }
+    .right{
+      color: var(--muted);
+      white-space: nowrap;
+      flex: 0 0 auto;
+    }
+    .role{ font-weight:700; }
+    .org{ font-style: italic; }
+    .loc{ color: var(--muted); }
+    .sub{
+      margin:8px 0 0 0;
+      padding-left: 18px;
+    }
+    .sub li{
+      margin: 4px 0;
+    }
+
+    /* Scholar button */
+    .actions{
+      margin-top: 18px;
+    }
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border:1px solid var(--border);
+      border-radius:6px;
+      text-decoration:none;
+      color: var(--link);
+      background:#fff;
+    }
+    .btn:hover{ text-decoration:underline; }
+
+    /* Small screens */
+    @media (max-width:540px){
+      .right{ width:100%; margin-top:6px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Avik Mahata</h1>
+    <hr>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="resume.html">Resume</a> |
+    <a href="research.html">Research</a> |
+    <a href="teaching.html">Teaching</a> |
+    <a href="team.html">Team</a>
+  </nav>
+
+  <main class="card">
+    <h2>Academic Appointments</h2>
+
+    <ul class="appointments">
+      <li class="item">
+        <div class="row">
+          <div class="left">
+            <div class="role">Tenure Track Faculty, Mechanical and Electrical Engineering</div>
+            <div class="org">Merrimack College</div>
+            <div class="loc">North Andover, MA</div>
+          </div>
+          <div class="right"><em>Aug 2025 – Present</em></div>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="row">
+          <div class="left">
+            <div class="role">Tenure Track Assistant Professor, Mechanical Engineering</div>
+            <div class="org">King's College</div>
+            <div class="loc">Wilkes-Barre, PA</div>
+          </div>
+          <div class="right"><em>Aug 2023 – Aug 2025</em></div>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="row">
+          <div class="left">
+            <div class="role">Guest Researcher / Postdoctoral Research Associate</div>
+            <div class="org">National Institute of Standards and Technology (NIST)</div>
+            <div class="loc">Gaithersburg, MD</div>
+            <ul class="sub">
+              <li><em>Research focus:</em> Dielectric spectra analysis of ion–water solutions using computational materials science and chemistry tools.</li>
+            </ul>
+          </div>
+          <div class="right"><em>Apr 2021 – Jun 2023</em></div>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="row">
+          <div class="left">
+            <div class="role">Postdoctoral Research Associate</div>
+            <div class="org">School of Engineering, Brown University</div>
+            <div class="loc">Providence, RI</div>
+            <ul class="sub">
+              <li><em>Research focus:</em> Accelerated materials simulation using machine learning in atomistic simulations.</li>
+            </ul>
+          </div>
+          <div class="right"><em>Oct 2019 – Mar 2021</em></div>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="row">
+          <div class="left">
+            <div class="role">Project Associate</div>
+            <div class="org">Indian Institute of Science</div>
+            <div class="loc">Bangalore, India</div>
+          </div>
+          <div class="right"><em>Jun 2014 – Dec 2015</em></div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="actions">
+      <a class="btn" href="https://scholar.google.com/citations?hl=en&user=8ssEV0gAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">See complete list on Google Scholar</a>
+    </div>
+  </main>
+</body>
+</html>
