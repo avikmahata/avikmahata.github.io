@@ -1,91 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mahata Lab – Avik Mahata</title>
   <style>
-    body {
-      font-family: "Georgia", serif;
-      margin: 40px auto;
-      max-width: 900px;
-      line-height: 1.6;
-      background-color: #fafafa;
-      color: #111;
-      text-align: center;
+    /* Base layout */
+    body{
+      font-family:"Georgia", serif;
+      margin:40px auto;
+      max-width:1100px;
+      line-height:1.6;
+      background:#fafafa;
+      color:#111;
+      text-align:center;
+    }
+    h1{font-size:2.5em;margin-bottom:.2em;font-weight:400;letter-spacing:.02em}
+    hr{width:60px;border:1px solid #ccc;margin:10px auto 30px auto}
+
+    /* Nav */
+    nav{margin:20px 0 30px}
+    nav a{color:#0044cc;text-decoration:none;margin:0 12px}
+    nav a:hover{text-decoration:underline}
+
+    /* Two-column area */
+    .container{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:30px;
+      margin-top:10px;
+      text-align:left;
     }
 
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 0.2em;
-      font-weight: 400;
-      letter-spacing: 0.02em;
+    /* Left: intro box */
+    .content{
+      flex:2;
+      border:1px solid #555;
+      background:#fff;
+      padding:25px 35px;
+      border-radius:5px;
     }
+    .content h2{color:#c00;font-size:1.4em;font-weight:bold;text-align:center}
+    .content p{text-align:justify;text-justify:inter-word;font-size:1.05em;margin:0 0 20px}
 
-    hr {
-      width: 60px;
-      border: 1px solid #ccc;
-      margin: 10px auto 30px auto;
+    /* Contact card inside the intro box */
+    .contact-break{margin-top:25px;border:1px solid #ddd}
+    .contact{
+      text-align:center;font-size:.95em;color:#333;margin-top:10px
     }
+    .contact a{color:#0044cc;text-decoration:none}
+    .contact a:hover{text-decoration:underline}
 
-    h2 {
-      color: red;
-      font-size: 1.4em;
-      font-weight: bold;
-      margin-top: 40px;
-    }
+    /* Right: news */
+    .news{flex:1;border-left:3px solid #0044cc;padding-left:20px}
+    .news h3{color:#0044cc;font-size:1.2em;margin:0 0 12px}
+    .news-item{margin-bottom:10px;font-size:.95em}
+    .news-item .date{color:#0044cc;font-weight:600}
 
-    p {
-      text-align: justify;
-      text-justify: inter-word;
-      font-size: 1.05em;
-      margin: 0 10px 20px 10px;
-    }
-
-    nav {
-      margin: 20px 0 30px 0;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #0044cc;
-      margin: 0 12px;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .content {
-      border: 1px solid #555;
-      background: white;
-      padding: 25px 35px;
-      border-radius: 5px;
-    }
-
-    .news {
-      text-align: left;
-      margin-top: 35px;
-      border-top: 2px solid #ccc;
-      padding-top: 20px;
-    }
-
-    .news h3 {
-      text-align: center;
-      color: #0044cc;
-      font-size: 1.3em;
-      margin-bottom: 15px;
-    }
-
-    .news-item {
-      margin-bottom: 8px;
-      padding-left: 10px;
-      border-left: 3px solid #0044cc;
-    }
-
-    .news-item .date {
-      font-weight: bold;
-      color: #0044cc;
+    /* Responsive */
+    @media (max-width: 900px){
+      body{max-width:900px}
+      .container{flex-direction:column}
+      .news{border-left:none;border-top:2px solid #0044cc;margin-top:25px;padding-left:0;padding-top:15px}
     }
   </style>
 </head>
@@ -99,70 +76,68 @@
     <a href="resume.html">Resume</a> |
     <a href="research.html">Research</a> |
     <a href="teaching.html">Teaching</a> |
-    <a href="team.html">Team</a> |
+    <a href="team.html">Team</a>
   </nav>
 
-  <div class="content">
-    <h2>Welcome to Advanced Materials Intelligence (AMI) Lab</h2>
-    <p>
-      Our research group focuses on <b>computational materials science</b>—developing and integrating
-      advanced modeling tools to study multiscale defect formation, microstructural evolution, and
-      material properties in metals, alloys, and hydrogen-related systems. We employ
-      <b>large-scale parallel computing</b> (petascale and exascale) on supercomputers equipped with
-      thousands of CPUs and GPUs, enabling high-fidelity simulations that capture the complexities of both
-      fundamental science and engineering applications.
-    </p>
+  <div class="container">
 
-    <p>
-      To calibrate and validate our predictions, we synergize <b>machine learning</b> and data analytics
-      with a suite of experimental techniques (optical microscopy, SEM-orientation image mapping, TEM).
-      This holistic approach ensures robust insights into nano- and microstructural phenomena,
-      paving the way for optimized materials design and performance. We welcome collaborative
-      efforts with fellow researchers in academia, national laboratories, and industry to accelerate
-      breakthroughs in sustainable energy, advanced alloys, and next-generation computational strategies.
-    </p>
+    <!-- Left column: Intro + Contact -->
+    <div class="content">
+      <h2>Welcome to Advanced Materials Intelligence (AMI) Lab</h2>
+      <p>
+        Our research group focuses on <b>computational materials science</b>—developing and integrating
+        advanced modeling tools to study multiscale defect formation, microstructural evolution, and
+        material properties in metals, alloys, and hydrogen-related systems. We employ
+        <b>large-scale parallel computing</b> (petascale and exascale) on supercomputers equipped with
+        thousands of CPUs and GPUs, enabling high-fidelity simulations that capture the complexities of both
+        fundamental science and engineering applications.
+      </p>
 
+      <p>
+        To calibrate and validate our predictions, we synergize <b>machine learning</b> and data analytics
+        with a suite of experimental techniques (optical microscopy, SEM-orientation image mapping, TEM).
+        This holistic approach ensures robust insights into nano- and microstructural phenomena,
+        paving the way for optimized materials design and performance. We welcome collaborative
+        efforts with fellow researchers in academia, national laboratories, and industry to accelerate
+        breakthroughs in sustainable energy, advanced alloys, and next-generation computational strategies.
+      </p>
 
-<hr style="margin-top:25px; border:1px solid #ddd;">
-    <p style="text-align:center; font-size:0.95em; color:#333;">
-      <strong>Avik Mahata, Ph.D.</strong><br>
-      Assistant Professor of Mechanical &amp; Electrical Engineering<br>
-      <a href="https://www.merrimack.edu/profiles/avik-mahata" target="_blank" style="color:#0044cc;">
-        Merrimack College
-      </a><br>
-      510&nbsp;Turnpike&nbsp;St,&nbsp;North&nbsp;Andover,&nbsp;MA&nbsp;01843<br>
-      Office:&nbsp;978-837-5421&nbsp;|&nbsp;
-      <a href="mailto:mahataa@merrimack.edu" style="color:#0044cc;">mahataa@merrimack.edu</a>
-    </p>
-
-
-
-
-    
-  </div>
-
-  <div class="news">
-    <h3>Recent News</h3>
-
-    <div class="news-item">
-      <span class="date">October 2025</span> — ALCF computing allocation received.
+      <hr class="contact-break">
+      <p class="contact">
+        <strong>Avik Mahata, Ph.D.</strong><br>
+        Assistant Professor of Mechanical &amp; Electrical Engineering<br>
+        <a href="https://www.merrimack.edu/profiles/avik-mahata" target="_blank">Merrimack College</a><br>
+        510 Turnpike St, North Andover, MA 01843<br>
+        Office: 978-837-5421 &nbsp;|&nbsp;
+        <a href="mailto:mahataa@merrimack.edu">mahataa@merrimack.edu</a>
+      </p>
     </div>
 
-    <div class="news-item">
-      <span class="date">September 2025</span> — Computing time awarded to Mahata Group: Access Credit (750,000 Credits).
+    <!-- Right column: Recent News -->
+    <div class="news">
+      <h3>Recent News</h3>
+
+      <div class="news-item">
+        <span class="date">October 2025</span> — ALCF computing allocation received.
+      </div>
+
+      <div class="news-item">
+        <span class="date">September 2025</span> — Computing time awarded to Mahata Group: Access Credit (750,000 Credits).
+      </div>
+
+      <div class="news-item">
+        <span class="date">June 2025</span> — Presented at the 8th World Congress on Integrated Computational Materials Engineering (TMS), Anaheim, CA.
+      </div>
+
+      <div class="news-item">
+        <span class="date">September 2024</span> — Computing time awarded to Mahata Group: Access Credit (250,000 Credits).
+      </div>
+
+      <div class="news-item">
+        <span class="date">September 2024</span> — NSF Award #2407535: MRI Track 1 – Acquisition of High Performance Computing System for Interdisciplinary Research and Teaching (CNS Division, King’s College, $448,063).
+      </div>
     </div>
 
-    <div class="news-item">
-      <span class="date">June 2025</span> — Presented at the 8th World Congress on Integrated Computational Materials Engineering (TMS), Anaheim, CA.
-    </div>
-
-    <div class="news-item">
-      <span class="date">September 2024</span> — Computing time awarded to Mahata Group: Access Credit (250,000 Credits).
-    </div>
-
-    <div class="news-item">
-      <span class="date">September 2024</span> — NSF Award #2407535: MRI Track 1 – Acquisition of High Performance Computing System for Interdisciplinary Research and Teaching (CNS Division, King’s College, $448,063).
-    </div>
   </div>
 
 </body>
